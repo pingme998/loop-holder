@@ -1,7 +1,7 @@
 FROM dorowu/ubuntu-desktop-lxde-vnc
 RUN apt update
 RUN apt install nano -y
-COPY def /def 
+#COPY def /def 
 ENV VNC_PASS="samplepass"
 ENV BRAVE_USE_SHM=0
 RUN curl -fsSLo /usr/share/keyrings/brave-browser-archive-keyring.gpg https://brave-browser-apt-release.s3.brave.com/brave-browser-archive-keyring.gpg
