@@ -9,3 +9,4 @@ RUN echo "deb [signed-by=/usr/share/keyrings/brave-browser-archive-keyring.gpg a
 RUN apt update
 RUN apt-get install --no-install-recommends brave-browser -y
 RUN sed 's/# clearup/echo "$PORT" >\/PORT; sed -i "s\/listen 80 default_server\/listen $(cat \/PORT) default_server\/g" \/etc\/nginx\/sites-enabled\/default/g' -i /startup.sh
+CMD /startup.sh
